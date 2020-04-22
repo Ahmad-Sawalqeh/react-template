@@ -2,7 +2,7 @@
   "name": "react-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Ahmad-Sawalqeh/react-template/issues"
   },
-  "homepage": "/",
+  "homepage": "https://ahmad-sawalqeh.github.io/react-template/",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
