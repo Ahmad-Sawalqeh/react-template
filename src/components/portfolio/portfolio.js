@@ -1,5 +1,5 @@
 import React , {useState , useEffect}  from 'react';
-import { Container, PortfolioSection , PortfolioTitle , PortfolioList , PortfolioItem , Span , Overlay , OverlaySpan , ImageWrapper , Image } from './style.js'
+import { PortfolioSection , PortfolioTitle , PortfolioList , PortfolioItem , Span , Overlay , OverlaySpan , ImageWrapper , Image } from './style.js'
 import axios from 'axios'
 const Portfolio = () => {
 
@@ -24,23 +24,21 @@ const Portfolio = () => {
     } )
 
     return (
-        // <Container>
-            <PortfolioSection>
-                <PortfolioTitle><Span>My</Span> Portfolio</PortfolioTitle>
-                <PortfolioList>
-                    <PortfolioItem active>All</PortfolioItem>
-                    <PortfolioItem>HTML</PortfolioItem>
-                    <PortfolioItem>Photoshop</PortfolioItem>
-                    <PortfolioItem>Wordpress</PortfolioItem>
-                    <PortfolioItem>Mobile</PortfolioItem>
-                </PortfolioList>
-                
-                <div className="box">
-                    {PortfolioImages}              
-                </div>
-                
-            </PortfolioSection>
-        // </Container>
+        <PortfolioSection>
+            <PortfolioTitle><Span>My</Span> Portfolio</PortfolioTitle>
+            <PortfolioList>
+                <PortfolioItem active>All</PortfolioItem>
+                <PortfolioItem>HTML</PortfolioItem>
+                <PortfolioItem>Photoshop</PortfolioItem>
+                <PortfolioItem>Wordpress</PortfolioItem>
+                <PortfolioItem>Mobile</PortfolioItem>
+            </PortfolioList>
+            
+            <div className="box">
+                {PortfolioImages}              
+            </div>
+            
+        </PortfolioSection>
     )
 }
 
