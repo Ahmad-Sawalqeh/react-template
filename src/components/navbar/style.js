@@ -35,10 +35,9 @@ export const ListItem = styled.li`
     display: inline-block;
 `
 
-export const Anchor = styled.a`
+export const Anchor = styled.span`
     display: block;
     color: #222;
-    text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
     &:hover {

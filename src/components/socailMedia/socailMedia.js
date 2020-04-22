@@ -1,45 +1,35 @@
-import React  from 'react';
-import { SocialMedia , Social , Icon  , SocialDesc , Span , SpanInfo} from './style.js'
+import React, { useState, useEffect }  from 'react';
+import { SocialMedias , Social , Icon  , SocialDesc , Span , SpanInfo} from './style.js'
 
 import axios from 'axios'
 
-class SocailMedia extends React.Component {
+function SocailMedia () {
 
-    state = {
-        social: []
-    }
+    const [social, setSocial] = useState([]);
 
-    componentDidMount () {
-        axios.get('js/data.json')
-        .then( res => 
-            { this.setState({ social : res.data.social })
-        })
-    }
+    useEffect( () => {
+        axios.get('js/data.json').then( res => { setSocial(res.data.social)});
+    }, []);
 
-    render() {
-
-        const {social } = this.state 
-
-        const socialList = social.map( (socialItem) => {
-            return (
-                <Social item={socialItem.id} key={socialItem.id}>
-                    <Icon className={socialItem.icon}></Icon>
-                    <SocialDesc>
-                        <Span>{socialItem.title}</Span>
-                        <SpanInfo>{socialItem.body}</SpanInfo>
-                    </SocialDesc>
-                </Social>
-            )
-        } )
-
+    const socialList = social.map( (socialItem) => {
         return (
-            <SocialMedia>
-                
-               {socialList}
-                
-            </SocialMedia>
+            <Social item={socialItem.id} key={socialItem.id}>
+                <Icon className={socialItem.icon}></Icon>
+                <SocialDesc>
+                    <Span>{socialItem.title}</Span>
+                    <SpanInfo>{socialItem.body}</SpanInfo>
+                </SocialDesc>
+            </Social>
         )
-    }
+    } )
+
+    return (
+        <SocialMedias>
+            
+            {socialList}
+            
+        </SocialMedias>
+    )
 }
 
 export default SocailMedia;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SocialMedia = styled.div`
+export const SocialMedias = styled.div`
     height: auto;
     overflow: hidden;
 `
