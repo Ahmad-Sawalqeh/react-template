@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Ahmad-Sawalqeh/react-template/issues"
   },
-  "homepage": "https://ahmad-sawalqeh.github.io/react-template/",
+  "homepage": "/",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
